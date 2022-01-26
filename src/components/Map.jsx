@@ -24,13 +24,13 @@ const Map = (props) => {
                 style={{ height: '100vh', width: '100%' }}
             >
                 <Marker position={options.center} />
-                <Bound />
-                <GridLayer />
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     maxZoom={19}
                 />
+                <Bound />
+                <GridLayer />
             </MapContainer>
         </div>
     )

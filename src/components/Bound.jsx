@@ -10,8 +10,7 @@ const Bound = (props) => {
         let bounds = map.getBounds();
         boundingBox = `Север: ${bounds.getNorth()}, Юг: ${bounds.getSouth()}, Запад: ${bounds.getWest()}, Восток: ${bounds.getEast()}`;
         console.log(boundingBox)
-
-       
+        map.createPane('labels');
     }, [])
 
     map.on('zoomend', () => {

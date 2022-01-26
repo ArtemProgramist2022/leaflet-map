@@ -8,7 +8,6 @@ const GridLayer = (props) => {
     let map = useMap();
 
     useEffect(() => {
-        map.createPane('labels');
 
         L.GridLayer.DebugCoords = L.GridLayer.extend({
             // {x, y, z}
@@ -39,12 +38,11 @@ const GridLayer = (props) => {
             return new L.GridLayer.DebugCoords(opts);
         };
 
-        setTimeout(() => {
-            map.addLayer(L.gridLayer.debugCoords({
-                tileSize: 1024,
-                noWrap: true
-            }));
-        })
+
+        map.addLayer(L.gridLayer.debugCoords({
+            tileSize: 1024,
+            noWrap: true
+        }));
 
     }, [])
 
